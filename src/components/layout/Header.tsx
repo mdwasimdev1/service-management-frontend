@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 import { FiUser } from "react-icons/fi";
 import { FaChevronDown } from "react-icons/fa";
+import CustomButton from "../ui/CustomButton";
 
 // ─── Nav data ──────────────────────────────────────────────────────────────────
 const navCategories = [
@@ -131,11 +132,11 @@ export default function Header() {
             </svg>
           </span>
           <span className="flex flex-col leading-tight">
-            <strong className="text-[20px] font-extrabold tracking-tight text-stone-900">
+            <strong className="text-[20px] font-extrabold tracking-tight text-amber-500">
               Servic
             </strong>
-            <small className="hidden sm:block text-[9px] text-stone-400 font-normal tracking-wide whitespace-nowrap">
-              One Thousand Services India
+            <small className="hidden sm:block text-[9px] text-stone-700 font-normal tracking-wide whitespace-nowrap">
+              One Thousand Services Bangladesh
             </small>
           </span>
         </a>
@@ -143,23 +144,27 @@ export default function Header() {
         {/* Desktop action buttons */}
         <div className="flex items-center gap-2.5">
           {/* Login – visible on tablet+ */}
-          <a
-            href="/login"
-            id="header-login-btn"
-            className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 border-[1.5px] border-amber-500 rounded-lg text-sm font-semibold text-stone-800 bg-transparent hover:bg-amber-50 hover:border-amber-600 transition-all duration-150 whitespace-nowrap no-underline"
-          >
-            <FiUser className="text-base" />
-            Login
-          </a>
+          <div className="hidden sm:inline-flex">
+            <CustomButton
+              id="header-login-btn"
+              href="/login"
+              variant="outline"
+              icon={<FiUser />}
+            >
+              Login
+            </CustomButton>
+          </div>
 
           {/* Request A Service CTA – visible on md+ */}
-          <a
-            href="/request"
-            id="header-cta-btn"
-            className="hidden md:inline-flex items-center px-5 py-2.5 rounded-lg bg-stone-900 text-white text-sm font-semibold hover:bg-stone-700 hover:-translate-y-px transition-all duration-150 whitespace-nowrap no-underline"
-          >
-            Request A Service
-          </a>
+          <div className="hidden md:inline-flex">
+            <CustomButton
+              id="header-cta-btn"
+              href="/request"
+              variant="primary"
+            >
+              Request A Service
+            </CustomButton>
+          </div>
 
           {/* Hamburger – mobile only */}
           <button
@@ -263,19 +268,21 @@ export default function Header() {
 
               {/* Mobile CTA row */}
               <div className="flex flex-col sm:flex-row gap-3 p-4">
-                <a
+                <CustomButton
                   href="/login"
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 border-[1.5px] border-amber-500 rounded-lg text-sm font-semibold text-stone-800 hover:bg-amber-50 transition-all duration-150 no-underline"
+                  variant="outline"
+                  icon={<FiUser />}
+                  className="flex-1"
                 >
-                  <FiUser />
                   Login
-                </a>
-                <a
+                </CustomButton>
+                <CustomButton
                   href="/request"
-                  className="flex-1 flex items-center justify-center px-4 py-2.5 rounded-lg bg-stone-900 text-white text-sm font-semibold hover:bg-stone-700 transition-all duration-150 no-underline"
+                  variant="primary"
+                  className="flex-1"
                 >
                   Request A Service
-                </a>
+                </CustomButton>
               </div>
             </nav>
           </motion.div>

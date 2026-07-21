@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FiUser, FiLock } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import CustomButton from "../components/ui/CustomButton";
 
 export default function LoginPage() {
   return (
@@ -52,13 +53,14 @@ export default function LoginPage() {
             </div>
           </div>
 
-          <button
+          <CustomButton
             type="submit"
             id="login-submit-btn"
-            className="w-full py-3 rounded-xl bg-stone-900 text-white font-semibold text-sm hover:bg-stone-700 transition-colors duration-150 mt-2"
+            variant="primary"
+            fullWidth
           >
             Sign In
-          </button>
+          </CustomButton>
         </form>
 
         <p className="text-center text-sm text-stone-500 mt-6">
