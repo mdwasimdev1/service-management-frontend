@@ -132,7 +132,7 @@ export default function Header() {
             </svg>
           </span>
           <span className="flex flex-col leading-tight">
-            <strong className="text-[20px] font-extrabold tracking-tight text-amber-500">
+            <strong className="text-2xl font-extrabold tracking-tight text-amber-500">
               Servic
             </strong>
             <small className="hidden sm:block text-[9px] text-stone-700 font-normal tracking-wide whitespace-nowrap">
@@ -183,7 +183,7 @@ export default function Header() {
       <nav
         ref={navRef}
         aria-label="Service categories"
-        className="hidden lg:flex items-stretch border-t border-stone-200 overflow-x-auto scrollbar-none max-w-screen-xl mx-auto px-4"
+        className="hidden lg:flex items-stretch border-t border-b border-stone-200 max-w-screen-xl mx-auto px-4"
       >
         {navCategories.map((cat, i) => (
           <div
@@ -195,23 +195,25 @@ export default function Header() {
             <button
               aria-haspopup="true"
               aria-expanded={activeIdx === i}
-              className={`flex items-center gap-1.5 px-3.5 py-3 text-[13px] font-medium border-b-[3px] transition-all duration-150 cursor-pointer bg-transparent whitespace-nowrap font-[inherit]
+              className={`flex items-center gap-1.5 px-3.5 py-3 text-base font-medium border-b cursor-pointer bg-transparent  font-[inherit]
                 ${activeIdx === i
                   ? "text-stone-900 bg-amber-50 border-amber-500"
-                  : "text-stone-500 border-transparent hover:text-stone-900 hover:bg-amber-50 hover:border-amber-400"
+                  : "text-stone-500 border-r border-stone-200 hover:text-stone-900 hover:bg-amber-50 hover:border-amber-400"
                 }`}
               onClick={() => setActiveIdx(activeIdx === i ? null : i)}
             >
               {cat.label}
               <FaChevronDown
                 size={9}
-                className={`text-stone-400 flex-shrink-0 transition-transform duration-200 ${activeIdx === i ? "rotate-180" : ""}`}
+                className={`text-stone-400 flex-shrink-0  ${activeIdx === i ? "rotate-180" : ""}`}
               />
             </button>
             <DesktopDropdown items={cat.sub} visible={activeIdx === i} />
           </div>
         ))}
       </nav>
+
+
 
       {/* ── Mobile slide-down menu ───────────────────────────────────────────── */}
       <AnimatePresence>
