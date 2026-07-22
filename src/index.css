@@ -112,3 +112,10 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* ── Scrollbar hide utility (used by carousel tracks) ──────────────────────── */
+[data-scrollbar-hide]::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
