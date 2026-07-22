@@ -1,5 +1,6 @@
 import HeroSection from "../components/section/hero/HeroSection";
 import ServiceCategorySection from "../components/section/service-category/ServiceCategorySection";
+import Testimonials from "../components/section/testimonials/Testimonials";
 import WhyChooseUs from "../components/section/why-choose-us/WhyChooseUs";
 
 export default function HomePage() {
@@ -13,6 +14,9 @@ export default function HomePage() {
 
       {/* ── Why Choose Us Section ─────────────────────────────────────────── */}
       <WhyChooseUs />
+
+      {/* ── Testimonials Section ──────────────────────────────────────────── */}
+      <Testimonials />
     </div>
   );
 }
