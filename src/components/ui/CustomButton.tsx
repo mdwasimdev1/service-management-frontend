@@ -35,7 +35,7 @@ export default function CustomButton({
     "cursor-pointer select-none whitespace-nowrap no-underline",
 
     // Shape & spacing
-    "rounded-lg px-5 py-2.5",
+    "rounded-md px-5 py-2.5",
 
     // Typography
     "font-semibold text-sm font-[Inter,system-ui,sans-serif] leading-none",
@@ -53,7 +53,7 @@ export default function CustomButton({
     "focus-visible:outline focus-visible:outline-[2.5px] focus-visible:outline-amber-500 focus-visible:outline-offset-[3px]",
 
     // Full-width form variant
-    fullWidth ? "w-full py-[14px] rounded-xl text-[0.9375rem]" : "",
+    fullWidth ? "w-full py-5 rounded-md text-[0.9375rem]" : "",
 
     className,
   ]

@@ -13,12 +13,11 @@ const Footer = () => {
   return (
     <footer className="bg-[#111111] text-gray-400 font-sans relative overflow-hidden">
       {/* Background decorations - simple gradients to mimic the image's faint shapes */}
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-gradient-to-br from-teal-900/10 to-transparent opacity-50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-indigo-900/10 to-transparent opacity-50 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+    
       
       {/* Subtle grid pattern overlay if needed, but keeping it simple for now */}
       
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl relative z-10 pt-20 pb-12">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl relative z-10 pt-10 pb-5">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
           
           {/* Column 1: Brand & About */}
@@ -172,10 +171,10 @@ const Footer = () => {
       </div>
       
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800 py-6 mt-4 relative z-10">
+      <div className="border-t border-gray-800 py-5 mt-4 relative z-10">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
           <p className="text-gray-500">
-            Copyright 2026 <span className="text-white font-medium">Servic</span> | Design By <span className="text-white font-medium">Egens Lab</span>
+            Copyright 2026 <span className="text-white font-medium">Servic</span> | Design By <span className="text-white font-medium">MD Wasim</span>
           </p>
           <div className="flex gap-6 font-medium">
             <Link to="#" className="text-white hover:text-yellow-400 transition-colors">Support Policy</Link>

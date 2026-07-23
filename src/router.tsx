@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import RequestServicePage from "./pages/RequestServicePage";
 import NotFoundPage from "./pages/NotFoundPage";
+import ContactPage from "./pages/ContactPage";
 
 // Service pages
 import AcRepairPage from "./pages/services/AcRepairPage";
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: "login", element: <LoginPage /> },
       { path: "request", element: <RequestServicePage /> },
+      { path: "contact", element: <ContactPage /> },
 
       // ── Service category pages ───────────────────────────────────
       { path: "services/ac-repair", element: <AcRepairPage /> },
