@@ -17,8 +17,12 @@ export default function LoginPage() {
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-amber-400 mb-3">
             <FiUser className="text-white text-xl" />
           </div>
-          <h1 className="text-2xl font-extrabold text-stone-900">Welcome Back</h1>
-          <p className="text-stone-500 text-sm mt-1">Sign in to your Servic account</p>
+          <h1 className="text-2xl font-extrabold text-stone-900">
+            Welcome Back
+          </h1>
+          <p className="text-stone-500 text-sm mt-1">
+            Sign in to your Servic account
+          </p>
         </div>
 
         {/* Form */}
@@ -53,19 +57,17 @@ export default function LoginPage() {
             </div>
           </div>
 
-          <CustomButton
-            type="submit"
-            id="login-submit-btn"
-            variant="primary"
-            fullWidth
-          >
+          <CustomButton type="submit" fullWidth>
             Sign In
           </CustomButton>
         </form>
 
         <p className="text-center text-sm text-stone-500 mt-6">
           Don't have an account?{" "}
-          <Link to="/request" className="text-amber-600 font-semibold hover:underline">
+          <Link
+            to="/request"
+            className="text-amber-600 font-semibold hover:underline"
+          >
             Get started
           </Link>
         </p>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { 
   FaLinkedinIn, 
   FaFacebookF, 
@@ -133,7 +132,7 @@ const Footer = () => {
               
               {/* Phone */}
               <div className="flex items-center gap-4 py-4 border-b border-gray-800">
-                <div className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center flex-shrink-0 text-white">
+                <div className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center shrink-0 text-white">
                   <FiPhoneCall size={18} />
                 </div>
                 <div>
@@ -144,7 +143,7 @@ const Footer = () => {
               
               {/* Email */}
               <div className="flex items-center gap-4 py-4 border-b border-gray-800">
-                <div className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center flex-shrink-0 text-white">
+                <div className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center shrink-0 text-white">
                   <FiSend size={18} />
                 </div>
                 <div>
@@ -155,7 +154,7 @@ const Footer = () => {
               
               {/* Address */}
               <div className="flex items-center gap-4 py-4 border-b border-gray-800">
-                <div className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center flex-shrink-0 text-white">
+                <div className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center shrink-0 text-white">
                   <FiMapPin size={18} />
                 </div>
                 <div>
