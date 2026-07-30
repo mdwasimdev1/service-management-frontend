@@ -7,7 +7,7 @@ import { BsShieldCheck, BsClipboardCheck } from "react-icons/bs";
 import { AiOutlineStar } from "react-icons/ai";
 import CustomButton from "../../ui/CustomButton";
 
-// ── Popular search chips ───────────────────────────────────────────────────────
+//Popular search chips
 const popularTags = [
   "Ac Repair",
   "Cleaning",
@@ -16,7 +16,7 @@ const popularTags = [
   "Electric",
 ];
 
-// ── Stats ─────────────────────────────────────────────────────────────────────
+//Stats
 const stats = [
   {
     icon: <BsShieldCheck className="text-emerald-500 text-3xl" />,
@@ -35,7 +35,7 @@ const stats = [
   },
 ];
 
-// ── Location options ───────────────────────────────────────────────────────────
+// ── Location options
 const locations = [
   "Dhaka",
   "Chittagong",
@@ -44,175 +44,6 @@ const locations = [
   "Khulna",
   "Barishal",
 ];
-
-// ─────────────────────────────────────────────────────────────────────────────
-// PhoneMockup — simulates the Servic app UI inside a phone shell
-// ─────────────────────────────────────────────────────────────────────────────
-function PhoneMockup() {
-  return (
-    <div className="relative sm:w-72.5 mx-auto select-none">
-      {/* Phone shell */}
-      <div
-        className="relative rounded-[2.5rem] border-10 border-stone-800 bg-stone-800 shadow-[0_30px_80px_rgba(0,0,0,0.35),0_0_0_1px_rgba(0,0,0,0.2)] overflow-hidden"
-        style={{ aspectRatio: "9/19" }}
-      >
-        {/* Notch */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-stone-800 rounded-b-2xl z-10" />
-
-        {/* Screen */}
-        <div className="bg-white h-full overflow-hidden flex flex-col">
-          {/* Status bar */}
-          <div className="flex justify-between items-center px-4 pt-7 pb-2 text-[9px] font-semibold text-stone-700">
-            <span>9:41</span>
-            <span className="flex gap-1 items-center">
-              <span>●●●</span>
-              <span>WiFi</span>
-              <span>🔋</span>
-            </span>
-          </div>
-
-          {/* App header */}
-          <div className="flex items-center justify-between px-4 py-2">
-            <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-amber-400 flex items-center justify-center text-white text-xs font-bold">
-                S
-              </div>
-              <span className="text-[11px] font-bold text-stone-800">
-                Servic
-              </span>
-            </div>
-            <div className="w-7 h-7 rounded-full bg-stone-100 overflow-hidden flex items-center justify-center text-stone-400 text-xs">
-              👤
-            </div>
-          </div>
-
-          {/* Greeting */}
-          <div className="px-4 pb-2">
-            <p className="text-[11px] font-bold text-stone-800">
-              Good Morning, Sarah 👋
-            </p>
-            <p className="text-[9px] text-stone-400">
-              Let's book something beautiful today
-            </p>
-          </div>
-
-          {/* Search bar */}
-          <div className="mx-3 mb-3 flex items-center gap-1.5 bg-stone-50 border border-stone-200 rounded-lg px-2.5 py-1.5">
-            <HiSearch className="text-stone-400 text-xs shrink-0" />
-            <span className="text-[8px] text-stone-400">
-              Search services or snap a photo…
-            </span>
-          </div>
-
-          {/* Best Deals */}
-          <div className="px-4 mb-2">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-[9px] font-bold text-stone-800">
-                Best Deals
-              </span>
-              <span className="text-[8px] text-amber-500 font-semibold">
-                View All &rsaquo;
-              </span>
-            </div>
-            <div className="grid grid-cols-2 gap-1.5">
-              {[
-                { icon: "❄️", label: "AC Service" },
-                { icon: "🧹", label: "Cleaning" },
-                { icon: "💆", label: "Wellness" },
-                { icon: "⏰", label: "Reminders" },
-              ].map((item) => (
-                <div
-                  key={item.label}
-                  className="bg-stone-50 rounded-lg p-2 flex flex-col items-center gap-1"
-                >
-                  <span className="text-base">{item.icon}</span>
-                  <span className="text-[8px] font-medium text-stone-600">
-                    {item.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Promo banner */}
-          <div className="mx-3 mb-3 bg-linear-to-r from-amber-50 to-amber-100 rounded-xl p-2.5 flex items-center gap-2 border border-amber-200">
-            <span className="text-2xl">🧑‍🌾</span>
-            <div className="flex-1">
-              <p className="text-[8px] font-bold text-stone-800 leading-tight">
-                Consult the Gardening Specialist
-              </p>
-              <p className="text-[7px] text-stone-500 mb-1">
-                Get expert plant advice
-              </p>
-              <div className="inline-flex bg-amber-500 text-white text-[7px] font-bold rounded-md px-1.5 py-0.5">
-                Ask the Expert
-              </div>
-            </div>
-          </div>
-
-          {/* Explore */}
-          <div className="px-4">
-            <div className="flex justify-between items-center mb-1.5">
-              <span className="text-[9px] font-bold text-stone-800">
-                Explore Services
-              </span>
-              <span className="text-[8px] text-amber-500 font-semibold">
-                View All &rsaquo;
-              </span>
-            </div>
-            <div className="flex gap-1.5 overflow-x-hidden">
-              {["🚗", "🔧", "🏥"].map((icon, i) => (
-                <div
-                  key={i}
-                  className="shrink-0 w-14 h-14 rounded-xl bg-stone-100 flex items-center justify-center text-xl"
-                >
-                  {icon}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Reflection shine */}
-      <div
-        className="absolute inset-0 rounded-[2.5rem] pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%)",
-        }}
-      />
-    </div>
-  );
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// FloatingBadge — decorative emoji icon that bobs up and down
-// ─────────────────────────────────────────────────────────────────────────────
-function FloatingBadge({
-  emoji,
-  style,
-  delay,
-}: {
-  emoji: string;
-  style: React.CSSProperties;
-  delay: number;
-}) {
-  return (
-    <motion.div
-      className="absolute z-10 w-12 h-12 rounded-2xl bg-white shadow-lg flex items-center justify-center text-2xl"
-      style={style}
-      animate={{ y: [0, -10, 0] }}
-      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay }}
-    >
-      {emoji}
-    </motion.div>
-  );
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// HeroSection — main export
-// ─────────────────────────────────────────────────────────────────────────────
 export default function HeroSection() {
   const [location, setLocation] = useState("Dhaka");
   const [locOpen, setLocOpen] = useState(false);
@@ -242,7 +73,7 @@ export default function HeroSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
-          {/* ── LEFT COLUMN ──────────────────────────────────────────────── */}
+          {/* ── LEFT COLUMN */}
           <div className="flex-1 lg:pr-10 text-left">
             {/* Headline */}
             <motion.h1
@@ -251,9 +82,9 @@ export default function HeroSection() {
               transition={{ duration: 0.55 }}
               className="text-[2.6rem] sm:text-5xl lg:text-[3.4rem] font-extrabold leading-tight tracking-tight text-black"
             >
-              All Your <span className="text-red-500">Services</span>,One {" "}
+              All Your <span className="text-red-500">Services</span>,One{" "}
               <br className="hidden sm:block" />
-               Smart Platform.
+              Smart Platform.
             </motion.h1>
 
             {/* Popular search chips */}
@@ -277,83 +108,82 @@ export default function HeroSection() {
               ))}
             </motion.div>
 
-            <motion.div className="bg-red-500 rounded-md p-4 mt-6 max-w-2xl">
-              <motion.form
-                onSubmit={handleSearch}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="flex items-stretch bg-white rounded-md shadow-[0_4px_24px_rgba(0,0,0,0.10)] border border-stone-100 overflow-hidden max-w-2xl"
-              >
-                {/* Location picker */}
-                <div className="relative">
-                  <button
-                    type="button"
-                    onClick={() => setLocOpen((p) => !p)}
-                    className="flex items-center gap-2 px-4 py-2 text-base font-semibold text-stone-700 bg-transparent border-r border-stone-100 hover:bg-stone-50 transition-colors duration-150 cursor-pointer whitespace-nowrap"
-                  >
-                    <HiLocationMarker className="text-amber-500 text-base shrink-0" />
-                    <span className="flex flex-col items-start">
-                      <span className="text-sm text-stone-400 font-semibold">
-                        Location
-                      </span>
-                      <span className="text-base">{location}</span>
-                    </span>
-                    <FiChevronDown
-                      className={`text-stone-400 transition-transform duration-150 ${
-                        locOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-
-                  {/* Location dropdown */}
-                  {locOpen && (
-                    <ul className="absolute top-full left-0 mt-1 w-40 bg-white border border-stone-200 rounded-xl shadow-xl z-50 py-1 list-none m-0 p-0 overflow-hidden">
-                      {locations.map((loc) => (
-                        <li key={loc}>
-                          <button
-                            type="button"
-                            onClick={() => {
-                              setLocation(loc);
-                              setLocOpen(false);
-                            }}
-                            className={`w-full text-left px-4 py-2 text-sm font-medium cursor-pointer transition-colors duration-100 bg-transparent ${
-                              location === loc
-                                ? "text-amber-600 bg-amber-50"
-                                : "text-stone-600 hover:bg-stone-50"
-                            }`}
-                          >
-                            {loc}
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-
-                {/* Service search input */}
-                <div className="flex-1 flex items-center px-4 gap-2">
-                  <HiSearch className="text-stone-400 text-base shrink-0" />
-                  <input
-                    type="text"
-                    id="hero-search"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Find Your Service Here ..."
-                    className="flex-1 bg-transparent border-none text-stone-700 placeholder:text-stone-400 py-3.5 min-w-0"
-                  />
-                </div>
-
-                {/* Search CTA button */}
-                <CustomButton
-                  type="submit"
-                  id="hero-search-btn"
-                  className="m-2 shrink-0"
+            <motion.form
+              onSubmit={handleSearch}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex items-stretch bg-white rounded-md shadow-[0_4px_24px_rgba(0,0,0,0.10)] border-5 border-red-500 overflow-hidden max-w-2xl mt-6"
+            >
+              {/* Location picker */}
+              <div className="relative">
+                <button
+                  type="button"
+                  onClick={() => setLocOpen((p) => !p)}
+                  className="flex items-center gap-2 px-4 py-2 text-base font-semibold text-stone-700 bg-transparent border-r border-stone-100 hover:bg-stone-50 transition-colors duration-150 cursor-pointer whitespace-nowrap"
                 >
-                  Search
-                </CustomButton>
-              </motion.form>
-            </motion.div>
+                  <HiLocationMarker className="text-amber-500 text-base shrink-0" />
+                  <span className="flex flex-col items-start">
+                    <span className="text-sm text-stone-400 font-semibold">
+                      Location
+                    </span>
+                    <span className="text-base">{location}</span>
+                  </span>
+                  <FiChevronDown
+                    className={`text-stone-400 transition-transform duration-150 ${
+                      locOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {/* Location dropdown */}
+                {locOpen && (
+                  <ul className="absolute top-full left-0 mt-1 w-40 bg-white border border-stone-200 rounded-xl shadow-xl z-50 py-1 list-none m-0 p-0 overflow-hidden">
+                    {locations.map((loc) => (
+                      <li key={loc}>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setLocation(loc);
+                            setLocOpen(false);
+                          }}
+                          className={`w-full text-left px-4 py-2 text-sm font-medium cursor-pointer transition-colors duration-100 bg-transparent ${
+                            location === loc
+                              ? "text-amber-600 bg-amber-50"
+                              : "text-stone-600 hover:bg-stone-50"
+                          }`}
+                        >
+                          {loc}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+
+              {/* Service search input */}
+              <div className="flex-1 flex items-center px-4 gap-2">
+                <HiSearch className="text-stone-400 text-base shrink-0" />
+                <input
+                  type="text"
+                  id="hero-search"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Find Your Service Here ..."
+                  className="flex-1 bg-transparent border-none text-stone-700 placeholder:text-stone-400 py-2 min-w-0 focus:outline-none focus:ring-0"
+                />
+              </div>
+
+              {/* Search CTA button */}
+              <CustomButton
+                type="submit"
+                id="hero-search-btn"
+                className="m-2 shrink-0"
+              >
+                Search
+              </CustomButton>
+            </motion.form>
+
             {/* Location + Search bar */}
 
             {/* Stats row */}
@@ -382,49 +212,17 @@ export default function HeroSection() {
             transition={{ duration: 0.65, delay: 0.2, ease: "easeOut" }}
             className="relative shrink-0 flex items-center justify-center w-full lg:w-auto"
           >
-            {/* Decorative floating badges */}
-            <FloatingBadge
-              emoji="📦"
-              style={{ top: "4%", left: "-8%" }}
-              delay={0}
-            />
-            <FloatingBadge
-              emoji="🛒"
-              style={{ bottom: "6%", left: "-6%" }}
-              delay={0.7}
-            />
-            <FloatingBadge
-              emoji="🎁"
-              style={{ top: "8%", right: "-6%" }}
-              delay={0.4}
-            />
-            <FloatingBadge
-              emoji="🧴"
-              style={{ bottom: "10%", right: "-8%" }}
-              delay={1.1}
-            />
-
-            {/* Ambient amber glow */}
-            <div
-              className="absolute inset-x-10 inset-y-10 rounded-full blur-3xl opacity-40 pointer-events-none"
-              style={{
-                background:
-                  "radial-gradient(circle, #f59e0b 0%, #fbbf24 40%, transparent 70%)",
-              }}
-            />
-
-            {/* Ground shadow */}
-            <div
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-8 rounded-full blur-2xl opacity-30 pointer-events-none"
-              style={{ background: "#78350f" }}
-            />
-
-            {/* Phone gently bobs up and down */}
+            {/* Image gently bobs up and down (Replaced PhoneMockup) */}
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="relative top-10 z-10"
             >
-              <PhoneMockup />
+              <img
+                src="/home-banner.png"
+                alt="Hero Showcase"
+                className="w-72 md:w-80 h-auto object-cover"
+              />
             </motion.div>
           </motion.div>
         </div>
