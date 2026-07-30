@@ -7,19 +7,19 @@ import PopularPicks from "../components/section/services/PopularPicks";
 export default function HomePage() {
   return (
     <div>
-      {/* ── Hero Section ─────────────────────────────────────────────────── */}
+      {/* ── Hero Section */}
       <HeroSection />
 
-      {/* ── Service Category Section ──────────────────────────────────────── */}
+      {/* ── Service Category Section */}
       <ServiceCategorySection />
 
-      {/* ── Popular Picks Section ──────────────────────────────────────────── */}
+      {/* ── Popular Picks Section  */}
       <PopularPicks />
 
-      {/* ── Why Choose Us Section ─────────────────────────────────────────── */}
+      {/* ── Why Choose Us Section  */}
       <WhyChooseUs />
 
-      {/* ── Testimonials Section ──────────────────────────────────────────── */}
+      {/* ── Testimonials Section */}
       <Testimonials />
     </div>
   );

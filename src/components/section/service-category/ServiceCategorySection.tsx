@@ -104,7 +104,7 @@ export default function ServiceCategorySection() {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Section title ─────────────────────────────────────────────── */}
@@ -116,7 +116,7 @@ export default function ServiceCategorySection() {
           className="text-center mb-10"
         >
           <h2
-            className="uppercase inline-flex flex-col items-center gap-2 text-stone-900 pb-5"
+            className="uppercase inline-flex flex-col items-center gap-2 text-stone-900"
             style={{
               fontSize: "1.875rem",       /* 30px — text-3xl */
               fontWeight: 800,            /* extrabold — overrides global h2 font-weight:500 */
