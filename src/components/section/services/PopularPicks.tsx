@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaStar } from 'react-icons/fa';
 import { FiArrowRight } from 'react-icons/fi';
@@ -133,7 +133,7 @@ const PopularPicks = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-5 flex flex-col flex-grow justify-between">
+              <div className="p-5 flex flex-col grow justify-between">
                 <h3 className="font-bold text-gray-900 text-[17px] mb-4">
                   {service.title}
                 </h3>

@@ -63,26 +63,19 @@ export default function HeroSection() {
           "linear-gradient(135deg, #f5f0e4 0%, #faf8f0 60%, #f0ebe0 100%)",
       }}
     >
-      {/* Soft radial glow — top-right decoration */}
-      <div
-        className="absolute -top-32 -right-32 w-125 h-125 rounded-full opacity-30 pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, #f0d080 0%, transparent 70%)",
-        }}
-      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
           {/* ── LEFT COLUMN */}
-          <div className="flex-1 lg:pr-10 text-left">
+          <div className="flex-1 lg:pr-10 text-center lg:text-left flex flex-col items-center lg:items-start">
             {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55 }}
-              className="text-[2.6rem] sm:text-5xl lg:text-[3.4rem] font-extrabold leading-tight tracking-tight text-black"
+              className="text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold leading-tight tracking-tight text-black"
             >
-              All Your <span className="text-red-500">Services</span>,One{" "}
+              All Your <span className="text-red-500">Services</span>, One{" "}
               <br className="hidden sm:block" />
               Smart Platform.
             </motion.h1>
@@ -92,7 +85,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.18 }}
-              className="mt-6 flex flex-wrap items-center gap-2"
+              className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-2"
             >
               <span className="text-stone-500 font-semibold mr-1">
                 Popular Search:
@@ -113,14 +106,14 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex items-stretch bg-white rounded-md shadow-[0_4px_24px_rgba(0,0,0,0.10)] border-5 border-red-500 overflow-hidden max-w-2xl mt-6"
+              className="flex flex-col md:flex-row items-stretch md:items-center bg-white rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.10)] border-4 border-red-500 w-full max-w-2xl mt-6 relative z-10"
             >
               {/* Location picker */}
-              <div className="relative">
+              <div className="relative border-b md:border-b-0 md:border-r border-stone-200 w-full md:w-auto">
                 <button
                   type="button"
                   onClick={() => setLocOpen((p) => !p)}
-                  className="flex items-center gap-2 px-4 py-2 text-base font-semibold text-stone-700 bg-transparent border-r border-stone-100 hover:bg-stone-50 transition-colors duration-150 cursor-pointer whitespace-nowrap"
+                  className="flex w-full items-center justify-between md:justify-start gap-2 px-4 py-3 md:py-2 text-base font-semibold text-stone-700 bg-transparent hover:bg-stone-50 transition-colors duration-150 cursor-pointer whitespace-nowrap rounded-t-xl md:rounded-l-xl md:rounded-tr-none"
                 >
                   <HiLocationMarker className="text-amber-500 text-base shrink-0" />
                   <span className="flex flex-col items-start">
@@ -162,7 +155,7 @@ export default function HeroSection() {
               </div>
 
               {/* Service search input */}
-              <div className="flex-1 flex items-center px-4 gap-2">
+              <div className="flex-1 flex items-center px-4 py-3 md:py-0 gap-2 w-full md:w-auto">
                 <HiSearch className="text-stone-400 text-base shrink-0" />
                 <input
                   type="text"
@@ -175,13 +168,15 @@ export default function HeroSection() {
               </div>
 
               {/* Search CTA button */}
-              <CustomButton
-                type="submit"
-                id="hero-search-btn"
-                className="m-2 shrink-0"
-              >
-                Search
-              </CustomButton>
+              <div className="px-4 pb-4 md:p-0 md:pr-2 shrink-0 flex w-full md:w-auto">
+                <CustomButton
+                  type="submit"
+                  id="hero-search-btn"
+                  className="w-full md:w-auto py-3 md:py-2 m-0 md:m-2"
+                >
+                  Search
+                </CustomButton>
+              </div>
             </motion.form>
 
             {/* Location + Search bar */}
@@ -191,7 +186,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.44 }}
-              className="mt-8 flex flex-wrap gap-6 sm:gap-8"
+              className="mt-8 flex flex-wrap justify-center lg:justify-start gap-6 sm:gap-8"
             >
               {stats.map((s) => (
                 <div key={s.label} className="flex items-center gap-2.5">
