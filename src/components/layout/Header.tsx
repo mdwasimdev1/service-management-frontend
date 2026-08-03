@@ -159,7 +159,7 @@ export default function Header() {
           <div className="hidden md:inline-flex">
             <CustomButton
               id="header-cta-btn"
-              href="/request"
+              href="/blog"
               variant="link"
             >
               Blog
@@ -298,7 +298,7 @@ export default function Header() {
                   About Us
                 </CustomButton>
                 <CustomButton
-                  href="/request"
+                  href="/blog"
                   variant="link"
                   className="flex-1"
                 >

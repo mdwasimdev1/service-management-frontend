@@ -10,6 +10,8 @@ import RequestServicePage from "./pages/RequestServicePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ContactPage from "./pages/ContactPage";
 import ServiceDetailsPage from "./pages/ServiceDetailsPage";
+import BlogPage from "./pages/BlogPage";
+import BlogDetailsPage from "./components/section/blog/BlogDetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,8 @@ const router = createBrowserRouter([
       { path: "login", element: <LoginPage /> },
       { path: "request", element: <RequestServicePage /> },
       { path: "contact", element: <ContactPage /> },
+      { path: "blog", element: <BlogPage /> },
+      { path: "blog/:id", element: <BlogDetailsPage /> },
       { path: "service/:id", element: <ServiceDetailsPage /> },
     ],
   },
