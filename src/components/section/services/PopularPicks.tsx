@@ -122,8 +122,9 @@ const PopularPicks = () => {
           {/* Note: In a real app you'd filter based on activeCategory: services.filter(s => s.category === activeCategory).map(...) 
               But based on the design mockup which shows mixed services under one active tab, we'll display all for visual match. */}
           {services.map((service) => (
-            <div 
+            <Link 
               key={service.id} 
+              to={`/service/${service.id}`}
               className="bg-white rounded-[20px] border border-gray-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg flex flex-col h-full"
             >
               <div className="relative h-48 w-full overflow-hidden">
@@ -149,7 +150,7 @@ const PopularPicks = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

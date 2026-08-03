@@ -189,7 +189,7 @@ export default function ServiceCategorySection() {
                   }}
                 >
                   <Link
-                    to={cat.path}
+                    to={`/service/${cat.id}`}
                     className="group block rounded-xl overflow-hidden h-40 bg-black no-underline"
                   >
                     {/* ── Card image ─────────────────────────────────── */}
