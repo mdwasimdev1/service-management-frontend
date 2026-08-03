@@ -100,8 +100,8 @@ const ContactPage: React.FC = () => {
               <div className="flex flex-col gap-2">
                 <label className="text-sm font-bold text-[#2d3322]">Select Service *</label>
                 <div className="relative">
-                  <select className="w-full border border-gray-200 bg-white rounded-md px-4 py-3.5 text-gray-800 appearance-none focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-colors shadow-sm">
-                    <option value="" disabled selected className="text-gray-400">Home Shifting Service</option>
+                  <select defaultValue="" className="w-full border border-gray-200 bg-white rounded-md px-4 py-3.5 text-gray-800 appearance-none focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-colors shadow-sm">
+                    <option value="" disabled className="text-gray-400">Home Shifting Service</option>
                     <option value="cleaning">Cleaning Service</option>
                     <option value="repair">AC Repair Service</option>
                     <option value="plumbing">Electric & Plumbing</option>

@@ -305,7 +305,7 @@ export default function Header() {
                   Blog
                 </CustomButton>
                 <CustomButton
-                  href="/request"
+                  href="/contact"
                   variant="link"
                   className="flex-1"
                 >
