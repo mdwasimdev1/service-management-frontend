@@ -1,6 +1,7 @@
 import React from "react";
 
-type ButtonVariant = "primary" | "outline";
+// ১. নতুন ভ্যারিয়েন্ট "danger" যোগ করা হলো
+type ButtonVariant = "primary" | "outline" | "danger" | "link";
 
 interface CustomButtonProps {
   children: React.ReactNode;
@@ -25,36 +26,46 @@ export default function CustomButton({
   icon,
   fullWidth = false,
 }: CustomButtonProps) {
-  const isPrimary = variant === "primary";
-
   const ANIM = "transition-transform duration-600 ease-in-out";
 
+  // ২. বেস স্টাইলগুলো আলাদা অবজেক্টে রাখা হলো
+  const variantBaseStyles = {
+    primary: "bg-stone-900 border-2 border-solid border-stone-900 hover:border-amber-500 hover:shadow-[0_6px_24px_rgba(212,160,23,0.40)]",
+    outline: "bg-transparent border-2 border-solid border-amber-500 hover:shadow-[0_6px_20px_rgba(212,160,23,0.32)]",
+    danger: "bg-red-500 border-2 border-solid border-red-500 hover:border-red-600 hover:shadow-[0_6px_24px_rgba(239,68,68,0.40)]",
+    link: "bg-transparent border-0 hover:underline",
+  };
+
+  // ৩. নরমাল টেক্সট কালার
+  const variantTextStyles = {
+    primary: "text-white",
+    outline: "text-amber-500",
+    link: "text-amber-500",
+    danger: "text-white",
+  };
+
+  // ৪. হোভার করলে এনিমেশন হয়ে যে ব্যাকগ্রাউন্ড ও টেক্সট আসবে
+  const variantHoverBgStyles = {
+    primary: "bg-amber-500 text-stone-900",
+    outline: "bg-amber-500 text-stone-900",
+    danger: "bg-red-700 text-white",
+    link: "bg-amber-500 text-white no-underline",
+  };
+
   const base = [
-    // overflow-hidden clips both the rising combined layer and the exiting default text
     "group relative inline-flex items-center justify-center overflow-hidden",
     "cursor-pointer select-none whitespace-nowrap no-underline",
-
-    // Shape & spacing
     "rounded-md px-5 py-2.5",
-
-    // Typography
     "font-semibold text-sm font-[Inter,system-ui,sans-serif] leading-none",
+    "disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none",
+    
+    // এখান থেকে ডাইনামিক স্টাইল পাবে
+    variantBaseStyles[variant],
 
-    // Variant base colours + hover glow
-    isPrimary
-      ? "bg-stone-900 border-2 border-stone-900 hover:border-amber-500 hover:shadow-[0_6px_24px_rgba(212,160,23,0.40)]"
-      : "bg-transparent border-2 border-amber-500 hover:shadow-[0_6px_20px_rgba(212,160,23,0.32)]",
-
-    // Border-color + shadow get their own shorter transition
     "transition-[border-color,box-shadow] duration-1000 ease-out",
-
-    // Active press + focus ring
     "active:scale-[0.97]",
     "focus-visible:outline focus-visible:outline-[2.5px] focus-visible:outline-amber-500 focus-visible:outline-offset-[3px]",
-
-    // Full-width form variant
     fullWidth ? "w-full py-5 rounded-md text-[0.9375rem]" : "",
-
     className,
   ]
     .filter(Boolean)
@@ -69,7 +80,7 @@ export default function CustomButton({
           relative z-10 ${rowLayout}
           translate-y-0 group-hover:-translate-y-full
           ${ANIM}
-          ${isPrimary ? "text-white" : "text-amber-500"}
+          ${variantTextStyles[variant]}
         `}
       >
         {icon && <span className={`${rowLayout} text-base`}>{icon}</span>}
@@ -79,7 +90,7 @@ export default function CustomButton({
       <span
         className={`
           absolute inset-0 z-20 rounded-[inherit]
-          bg-amber-500 text-stone-900
+          ${variantHoverBgStyles[variant]}
           ${rowLayout} justify-center
           translate-y-full group-hover:translate-y-0
           ${ANIM}
@@ -91,7 +102,6 @@ export default function CustomButton({
     </>
   );
 
-  // ── Render as <a> or <button> ────────────────────────────────────────────────
   if (href) {
     return (
       <a id={id} href={href} className={base} onClick={onClick}>

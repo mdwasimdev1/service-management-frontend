@@ -133,7 +133,7 @@ export default function Header() {
           </span>
           <span className="flex flex-col leading-tight">
             <strong className="text-2xl font-extrabold tracking-tight text-amber-500">
-              Servic
+              Service Provider
             </strong>
             <small className="hidden sm:block text-[9px] text-stone-700 font-normal tracking-wide whitespace-nowrap">
               One Thousand Services Bangladesh
@@ -144,27 +144,47 @@ export default function Header() {
         {/* Desktop action buttons */}
         <div className="flex items-center gap-2.5">
           {/* Login – visible on tablet+ */}
-          <div className="hidden sm:inline-flex">
-            <CustomButton
-              id="header-login-btn"
-              href="/login"
-              variant="outline"
-              icon={<FiUser />}
-            >
-              Login
-            </CustomButton>
-          </div>
+         
 
           {/* Request A Service CTA – visible on md+ */}
           <div className="hidden md:inline-flex">
             <CustomButton
               id="header-cta-btn"
               href="/request"
-              variant="primary"
+              variant="link"
             >
-              Request A Service
+              about
             </CustomButton>
           </div>
+          <div className="hidden md:inline-flex">
+            <CustomButton
+              id="header-cta-btn"
+              href="/request"
+              variant="link"
+            >
+              Blog
+            </CustomButton>
+          </div>
+          <div className="hidden md:inline-flex">
+            <CustomButton
+              id="header-cta-btn"
+              href="/contact"
+              variant="link"
+            >
+             Contact
+            </CustomButton>
+          </div>
+           <div className="hidden sm:inline-flex">
+            <CustomButton
+              id="header-login-btn"
+              href="/login"
+              variant="link"
+              icon={<FiUser />}
+            >
+              Login
+            </CustomButton>
+          </div>
+         
 
           {/* Hamburger – mobile only */}
           <button
@@ -271,6 +291,27 @@ export default function Header() {
               {/* Mobile CTA row */}
               <div className="flex flex-col sm:flex-row gap-3 p-4">
                 <CustomButton
+                  href="/request"
+                  variant="link"
+                  className="flex-1"
+                >
+                  About Us
+                </CustomButton>
+                <CustomButton
+                  href="/request"
+                  variant="link"
+                  className="flex-1"
+                >
+                  Blog
+                </CustomButton>
+                <CustomButton
+                  href="/request"
+                  variant="link"
+                  className="flex-1"
+                >
+                  Contact
+                </CustomButton>
+                <CustomButton
                   href="/login"
                   variant="outline"
                   icon={<FiUser />}
@@ -278,13 +319,7 @@ export default function Header() {
                 >
                   Login
                 </CustomButton>
-                <CustomButton
-                  href="/request"
-                  variant="primary"
-                  className="flex-1"
-                >
-                  Request A Service
-                </CustomButton>
+                
               </div>
             </nav>
           </motion.div>
