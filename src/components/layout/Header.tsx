@@ -150,10 +150,10 @@ export default function Header() {
           <div className="hidden md:inline-flex">
             <CustomButton
               id="header-cta-btn"
-              href="/request"
+              href="/about"
               variant="link"
             >
-              about
+              About Us
             </CustomButton>
           </div>
           <div className="hidden md:inline-flex">
@@ -291,7 +291,7 @@ export default function Header() {
               {/* Mobile CTA row */}
               <div className="flex flex-col sm:flex-row gap-3 p-4">
                 <CustomButton
-                  href="/request"
+                  href="/about"
                   variant="link"
                   className="flex-1"
                 >
