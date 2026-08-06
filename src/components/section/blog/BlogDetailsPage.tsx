@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FiClock as FiClockIcon, FiUser as FiUserIcon, FiMessageSquare as FiMessageSquareIcon, FiSearch as FiSearchIcon, FiCheckCircle as FiCheckCircleIcon } from 'react-icons/fi';
-import { FaUserCircle, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
 export default function BlogDetailsPage() {
   return (

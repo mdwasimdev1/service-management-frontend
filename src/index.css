@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  /* নতুন কাস্টম কালার যোগ করা হচ্ছে */
+  --color-gold-custom: #C39D54;
+}
+
 :root {
 
   --text: #6b6375;

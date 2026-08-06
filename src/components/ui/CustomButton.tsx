@@ -40,7 +40,7 @@ export default function CustomButton({
   const variantTextStyles = {
     primary: "text-white",
     outline: "text-amber-500",
-    link: "text-amber-500",
+    link: "text-gold-custom",
     danger: "text-white",
   };
 
@@ -49,7 +49,7 @@ export default function CustomButton({
     primary: "bg-amber-500 text-stone-900",
     outline: "bg-amber-500 text-stone-900",
     danger: "bg-red-700 text-white",
-    link: "bg-amber-500 text-white no-underline",
+    link: "bg-gold-custom text-white no-underline",
   };
 
   const base = [

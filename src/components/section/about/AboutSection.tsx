@@ -45,7 +45,7 @@ const AboutSection: React.FC = () => {
 
           {/* Right Image Content */}
           <div className="flex-1 w-full relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3] max-w-[600px] ml-auto">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-4/3 max-w-150 ml-auto">
               {/* Since we don't have the exact image, we use a realistic placeholder from unsplash that fits the context (movers/construction/workers) */}
               <img 
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 

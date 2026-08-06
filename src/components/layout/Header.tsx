@@ -57,7 +57,7 @@ function DesktopDropdown({ items, visible }: { items: string[]; visible: boolean
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 6, scale: 0.97 }}
           transition={{ duration: 0.16, ease: "easeOut" }}
-          className="absolute top-full left-0 mt-1 min-w-[200px] bg-white border border-stone-200 rounded-xl shadow-xl z-50 py-1.5 list-none m-0 p-0"
+          className="absolute top-full left-0 mt-1 min-w-50 bg-white border border-stone-200 rounded-xl shadow-xl z-50 py-1.5 list-none m-0 p-0"
         >
           {items.map((item) => (
             <li key={item}>
@@ -115,24 +115,19 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-[#faf9f5] shadow-[0_1px_0_#e8e4d9,0_2px_16px_rgba(0,0,0,0.06)] font-[Inter,system-ui,sans-serif]">
       {/* ── Top bar ─────────────────────────────────────────────────────────── */}
-      <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto">
+      <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2.5 no-underline flex-shrink-0" aria-label="Servic Home">
+        <a href="/" className="flex items-center gap-2.5 no-underline shrink-0" aria-label="Servic Home">
           {/* SVG logo mark */}
           <span className="flex items-center">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
-              <rect width="30" height="30" rx="7" fill="#D4A017" />
-              <path
-                d="M7 15h4l3-7.5 4 15 3-7.5h2"
-                stroke="#fff"
-                strokeWidth="2.3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+            <img
+                src="/favicon.png"
+                alt="Hero Showcase"
+                className="w-10 md:w-12 h-auto object-cover"
               />
-            </svg>
           </span>
           <span className="flex flex-col leading-tight">
-            <strong className="text-2xl font-extrabold tracking-tight text-amber-500">
+            <strong className="text-2xl font-extrabold tracking-tight text-gold-custom">
               Service Provider
             </strong>
             <small className="hidden sm:block text-[9px] text-stone-700 font-normal tracking-wide whitespace-nowrap">
@@ -203,12 +198,12 @@ export default function Header() {
       <nav
         ref={navRef}
         aria-label="Service categories"
-        className="hidden lg:flex items-stretch border-t border-b border-stone-200 max-w-screen-xl mx-auto px-4"
+        className="hidden lg:flex items-stretch border-t border-b border-stone-200 max-w-7xl mx-auto px-4"
       >
         {navCategories.map((cat, i) => (
           <div
             key={cat.label}
-            className="relative flex-shrink-0"
+            className="relative shrink-0"
             onMouseEnter={() => onEnter(i)}
             onMouseLeave={onLeave}
           >
@@ -225,7 +220,7 @@ export default function Header() {
               {cat.label}
               <FaChevronDown
                 size={9}
-                className={`text-stone-400 flex-shrink-0  ${activeIdx === i ? "rotate-180" : ""}`}
+                className={`text-stone-400 shrink-0  ${activeIdx === i ? "rotate-180" : ""}`}
               />
             </button>
             <DesktopDropdown items={cat.sub} visible={activeIdx === i} />
@@ -257,7 +252,7 @@ export default function Header() {
                     {cat.label}
                     <FaChevronDown
                       size={11}
-                      className={`text-stone-400 flex-shrink-0 transition-transform duration-200 ${mobileExpanded === i ? "rotate-180" : ""}`}
+                      className={`text-stone-400 shrink-0 transition-transform duration-200 ${mobileExpanded === i ? "rotate-180" : ""}`}
                     />
                   </button>
 
